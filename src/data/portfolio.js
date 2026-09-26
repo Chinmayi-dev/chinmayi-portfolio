@@ -36,6 +36,11 @@ import yolov8 from '../assets/skills/yolov8.png';
 import vscodeLogo from '../assets/skills/vscodeLogo.png';
 import sql from '../assets/skills/sql.png';
 import { image } from 'framer-motion/client';
+import deliveryRobot from "../assets/projects/delivery-robot.png";
+import employeeApi from "../assets/projects/employee-api.png";
+import recommendationEngine from "../assets/projects/recommendation-engine.png";
+import industrialDefect from "../assets/projects/industrial-defect.png";
+import coffeeDisease from "../assets/projects/coffee-disease.png";
 
 export const profile = {
   name: 'Chinmayi D',
@@ -164,7 +169,7 @@ export const projects = [
   {
     title: 'Multi-Modal Sensor Fusion and AI-Based Navigation for Delivery Robots',
     art: 'robot',
-    image: '/src/assets/projects/delivery-robot.png',
+    image: deliveryRobot,
     tagline: 'AI-based delivery robot simulation for Indian road conditions, combining object detection, GPS synchronization, route planning, lane detection, and obstacle-avoidance decisions.',
     stack: ['Python', 'Flask', 'React', 'REST APIs'],
     workflow: ['Dataset & Field Collection', 'Preprocessing', 'YOLOv8n Model Training', 'Route Planning & Lane Detection', 'GPS Synchronization', 'Sensor Fusion & Decision Engine', 'Flask + React Dashboard', 'Evaluation'],
@@ -188,7 +193,7 @@ export const projects = [
   {
     title: 'Employee Management API',
     art: 'api',
-    image: '/src/assets/projects/employee-api.png',
+    image: employeeApi,
     tagline: 'RESTful employee management API with JWT authentication, validation, database operations, and API testing.',
     stack: ['Python', 'Flask', 'SQLAlchemy', 'Postman'],
     details: {
@@ -211,7 +216,7 @@ export const projects = [
   {
     title: 'Neural Recommendation Engine',
     art: 'neural',
-    image: '/src/assets/projects/recommendation-engine.png',
+    image: recommendationEngine,
     tagline: 'AI-powered two-tower recommendation system that learns user-item interaction patterns to generate personalized product recommendations.',
     stack: ['Python', 'FastAPI', 'PySpark', 'TensorFlow'],
     details: {
@@ -233,7 +238,7 @@ export const projects = [
   {
     title: 'Real-Time Industrial Defect Detection System',
     art: 'defect',
-    image: '/src/assets/projects/industrial-defect.png',
+    image: industrialDefect,
     tagline: 'Computer vision system for detecting and classifying surface defects in manufactured metal components from image, video, and webcam inputs.',
     stack: ['Python', 'PyTorch', 'OpenCV', 'FastAPI'],
     workflow: ['Camera / Image Input', 'Image Preprocessing', 'YOLOv8 Detection', 'Defect Classification', 'Defect Location & Visualization', 'Inspection Result'],
@@ -256,7 +261,7 @@ export const projects = [
   {
     title: 'Pesticide Prediction and Prescription for Coffee Leaf Disease Detection',
     art: 'leaf',
-    image: '/src/assets/projects/coffee-disease.png',
+    image: coffeeDisease,
     tagline: 'AI web application that detects coffee leaf diseases and provides region- and season-specific pesticide prescriptions.',
     stack: ['Python', 'Flask', 'YOLOv8', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
     details: {
