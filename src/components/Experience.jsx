@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="space-y-8">
           {experience.map((exp, i) => (
             <Reveal key={exp.role} delay={0.05 * i}>
-              <div className="h-full p-10 rounded-2xl border border-border bg-surface transition-all duration-200 hover:-translate-y-1 shadow-xl">
+              <div className="card-surface h-full p-10 rounded-2xl border border-border transition-all duration-200 hover:-translate-y-1 shadow-xl">
                 <div className="font-mono text-xs text-muted">
                   <p>{exp.duration}</p>
                   <p className="my-1 text-accent">{exp.location}</p>

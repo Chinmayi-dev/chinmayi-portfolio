@@ -44,17 +44,17 @@ export default function App() {
             <div className="absolute left-[-10%] top-[18%] h-[58%] w-[60%] rotate-[18deg] bg-indigo-500/10 clip-path-[polygon(0_0,100%_12%,82%_100%,0_88%)]" />
             <div className="absolute bottom-[12%] right-[-12%] h-[48%] w-[54%] -rotate-[10deg] bg-blue-500/10 clip-path-[polygon(18%_0,100%_0,100%_100%,0_88%)]" />
 
-            <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between gap-8 px-8 md:px-12">
+            <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-6 px-5 text-center md:flex-row md:items-center md:justify-between md:gap-8 md:px-12 md:text-left">
               <motion.div
-                initial={{ opacity: 0, x: -70 }}
+                initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, x: -70 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: prefersReducedMotion ? 0 : 0.8, ease: 'easeOut' }}
-                className="max-w-xl text-left md:ml-16"
+                className="max-w-xl md:ml-16"
               >
-                <h1 className="font-display text-2xl pb-2 font-semibold tracking-tight text-slate-400 md:text-3xl lg:text-4xl">
+                <h1 className="pb-2 font-display text-2xl font-semibold tracking-tight text-slate-400 md:text-3xl lg:text-4xl">
                   Welcome to
                 </h1>
-                <h1 className="font-display text-5xl pb-2 font-semibold tracking-tight text-white md:text-6xl lg:text-7xl">
+                <h1 className="pb-2 font-display text-5xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl">
                   Chinmayi&apos;s
                 </h1>
                 <h1 className="font-display text-2xl font-semibold tracking-tight text-slate-400 md:text-3xl lg:text-4xl">
@@ -63,10 +63,10 @@ export default function App() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 90 }}
+                initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, x: 90 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: prefersReducedMotion ? 0 : 0.8, delay: prefersReducedMotion ? 0 : 0.12, ease: 'easeOut' }}
-                className="relative hidden w-[400px] md:block"
+                className="relative w-full max-w-[260px] md:w-[400px] md:max-w-none"
               >
                 <div className="absolute inset-0 rounded-full bg-indigo-400/10 blur-3xl" />
                 <img
@@ -75,7 +75,7 @@ export default function App() {
                   onError={(event) => {
                     event.currentTarget.src = '/Chinmayi-D-Photo.png';
                   }}
-                  className="relative size-10/12"
+                  className="relative mx-auto w-full md:size-10/12"
                 />
               </motion.div>
             </div>

@@ -10,7 +10,7 @@ export default function Certifications() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {certifications.map((c, i) => (
             <Reveal key={c.title} delay={0.05 * i}>
-              <div className="h-full p-8 rounded-2xl border border-border bg-surface transition-all duration-200 hover:-translate-y-1 shadow-xl">
+              <div className="card-surface h-full p-8 rounded-2xl border border-border transition-all duration-200 hover:-translate-y-1 shadow-xl">
                 <Award size={18} className="text-accent" />
                 <h3 className="font-display font-semibold text-ink text-sm mt-3 leading-snug">{c.title}</h3>
                 <p className="text-xs text-muted mt-2 font-mono">{c.org} &middot; {c.date}</p>

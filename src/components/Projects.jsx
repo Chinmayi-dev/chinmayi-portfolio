@@ -110,7 +110,7 @@ function ProjectCard({ project, onOpen, delay = 0 }) {
 
   return (
     <Reveal delay={delay}>
-      <div className="h-full overflow-hidden rounded-xl border border-border bg-surface shadow-xl transition-all duration-200 hover:-translate-y-1">
+      <div className="card-surface h-full overflow-hidden rounded-xl border border-border shadow-xl transition-all duration-200 hover:-translate-y-1">
         <div className="relative h-[200px] w-full overflow-hidden rounded-t-xl border-b border-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
           {project.image && !imageError ? (
             <img

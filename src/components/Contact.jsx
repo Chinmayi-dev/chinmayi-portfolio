@@ -16,19 +16,19 @@ export default function Contact() {
         <Reveal delay={0.1} className="flex flex-wrap justify-center gap-4">
           <a
             href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-border bg-surface text-sm text-ink transition-all duration-200 hover:-translate-y-1 shadow-lg hover:border-accent/50 hover:text-accent"          
+              className="card-surface inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-border text-sm text-ink transition-all duration-200 hover:-translate-y-1 shadow-lg hover:border-accent/50 hover:text-accent"          
           >
             <Mail size={16} /> {profile.email}
           </a>
           <a
             href={profile.linkedin}
-            className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-border bg-surface text-sm text-ink transition-all duration-200 hover:-translate-y-1 shadow-lg hover:border-accent/50 hover:text-accent"
+            className="card-surface inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-border text-sm text-ink transition-all duration-200 hover:-translate-y-1 shadow-lg hover:border-accent/50 hover:text-accent"
           >
             <Linkedin size={16} /> LinkedIn
           </a>
           <a
             href={profile.github}
-            className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-border bg-surface text-sm text-ink transition-all duration-200 hover:-translate-y-1 shadow-lg hover:border-accent/50 hover:text-accent"
+            className="card-surface inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-border text-sm text-ink transition-all duration-200 hover:-translate-y-1 shadow-lg hover:border-accent/50 hover:text-accent"
           >
             <Github size={16} /> GitHub
           </a>

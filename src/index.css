@@ -34,10 +34,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body::before {
-  display: none;
-}
-
 #top {
   position: relative;
   overflow: hidden;
@@ -123,45 +119,12 @@ body::before {
   box-shadow: 0 0 0 1px rgba(255,255,255,0.02), 0 18px 38px rgba(15, 23, 42, 0.24);
 }
 
+.card-surface {
+  background-color: #f2f2fa;
+}
+
 .card-glow {
   box-shadow: 0 0 0 1px rgba(91, 158, 214, 0.08), 0 0 30px rgba(91, 158, 214, 0.06);
-}
-
-.project-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  background: rgba(15, 23, 42, 0.72);
-  backdrop-filter: blur(3px);
-}
-
-.project-modal {
-  position: relative;
-  z-index: 9999;
-  width: min(100%, 42rem);
-  max-height: 82vh;
-  overflow: hidden;
-  border-radius: 1rem;
-  border: 1px solid rgb(var(--border));
-  background: rgb(var(--bg));
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.38);
-}
-
-.project-modal-content {
-  max-height: calc(82vh - 73px);
-  overflow-y: auto;
-  padding: 1.5rem 1.5rem 1.75rem;
-}
-
-@media (min-width: 768px) {
-  .project-modal-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 }
 
 .project-modal-backdrop {

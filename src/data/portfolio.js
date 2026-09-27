@@ -1,4 +1,4 @@
-import React from 'react';
+import { createElement } from 'react';
 import {
   FaCss3,
   FaEye,
@@ -35,12 +35,14 @@ import sqlalchemy from '../assets/skills/sqlalchemy.png';
 import yolov8 from '../assets/skills/yolov8.png';
 import vscodeLogo from '../assets/skills/vscodeLogo.png';
 import sql from '../assets/skills/sql.png';
-import { image } from 'framer-motion/client';
 import deliveryRobot from "../assets/projects/delivery-robot.png";
 import employeeApi from "../assets/projects/employee-api.png";
 import recommendationEngine from "../assets/projects/recommendation-engine.png";
 import industrialDefect from "../assets/projects/industrial-defect.png";
 import coffeeDisease from "../assets/projects/coffee-disease.png";
+
+const makeImageIcon = (src, alt, className) => () =>
+  createElement('img', { src, alt, className });
 
 export const profile = {
   name: 'Chinmayi D',
@@ -67,7 +69,7 @@ export const skills = [
     ],
   },
   {
-    category: 'Web Development',
+    category: 'Frontend',
     items: [
       { name: 'React', icon: SiReact, color: '#61DAFB' },
       { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
@@ -80,24 +82,15 @@ export const skills = [
     items: [
       { name: 'Flask', icon: SiFlask, color: '#0D0D0D' },
       { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
-      { name: 'REST APIs', icon: () => React.createElement('img', { src: restapi, alt: 'REST APIs Logo', className: 'h-6 w-8', }), color: '#007ACC', },
-      { 
-         name: 'SQLALchemy', icon: () => React.createElement('img', { src: sqlalchemy, alt: 'SQLAlchemy logo', className: 'h-3 w-11', }), color: '#007ACC',
-      },
+      { name: 'REST APIs', icon: makeImageIcon(restapi, 'REST APIs Logo', 'h-6 w-8'), color: '#007ACC' },
+      { name: 'SQLALchemy', icon: makeImageIcon(sqlalchemy, 'SQLAlchemy logo', 'h-3 w-11'), color: '#007ACC' },
       { name: 'JWT', icon: SiJsonwebtokens, color: '#D63AFF' },
     ],
   },
   {
     category: 'Machine Learning & Data Science',
     items: [
-      { name: 'Machine Learning',
-        icon: () =>
-          React.createElement('img', {
-            src: machinelearning,
-            alt: 'Machine Learning Logo',
-            className: 'h-6 w-6',
-          }),
-        color: '#007ACC', },
+      { name: 'Machine Learning', icon: makeImageIcon(machinelearning, 'Machine Learning Logo', 'h-6 w-6'), color: '#007ACC' },
       { name: 'Computer Vision', icon: FaEye, color: '#F97316' },
       { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
       { name: 'PyTorch', icon: SiPytorch, color: '#EE4C2C' },
@@ -105,30 +98,13 @@ export const skills = [
       { name: 'Pandas', icon: SiPandas, color: '#150458' },
       { name: 'NumPy', icon: SiNumpy, color: '#4C78A8' },
       { name: 'OpenCV', icon: SiOpencv, color: '#5C3EE8' },
-      {
-        name: 'Yolov8',
-        icon: () =>
-          React.createElement('img', {
-            src: yolov8,
-            alt: 'Yolov8 Logo',
-            className: 'h-6 w-6',
-          }),
-        color: '#007ACC',
-      },
+      { name: 'Yolov8', icon: makeImageIcon(yolov8, 'Yolov8 Logo', 'h-6 w-6'), color: '#007ACC' },
     ],
   },
   {
     category: 'Databases',
     items: [
-      {
-        name: 'SQL',
-        icon: () =>
-          React.createElement('img', {
-            src: sql,
-            alt: 'SQL Logo',
-            className: 'h-6 w-8',
-          }),
-        color: '#007ACC',},
+      { name: 'SQL', icon: makeImageIcon(sql, 'SQL Logo', 'h-6 w-8'), color: '#007ACC' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
       { name: 'MySQL', icon: SiMysql, color: '#00758F' },
       { name: 'SQLite', icon: SiSqlite, color: '#003B57' },
@@ -140,9 +116,7 @@ export const skills = [
       { name: 'Git', icon: SiGit, color: '#F05032' },
       { name: 'GitHub', icon: SiGithub, color: '#111827' },
       { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
-      {
-        name: 'VS Code', icon: () => React.createElement('img', { src: vscodeLogo, alt: 'VS Code logo', className: 'h-6 w-6', }), color: '#007ACC',
-      },
+      { name: 'VS Code', icon: makeImageIcon(vscodeLogo, 'VS Code logo', 'h-6 w-6'), color: '#007ACC' },
       {name: 'Vercel', icon: SiVercel, color: '#000000'},
     ],
   },

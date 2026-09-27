@@ -14,7 +14,7 @@ export default function Skills() {
               key={group.category}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.22, ease: 'easeOut' }}
-              className="border-border bg-surface duration-200 hover:-translate-y-1 shadow-xl group rounded-2xl border border-slate-200/80 bg-white/80 p-5"
+              className="card-surface border-border duration-200 hover:-translate-y-1 shadow-xl group rounded-2xl border border-slate-200/80 p-5"
             >
               <h3 className="mb-4 font-display text-lg font-semibold text-ink">{group.category}</h3>
 
